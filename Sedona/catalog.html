@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Выбор жилья в Седоне</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/icons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+
+<body class="page__body">
+  <div class="page__wrapper">
+    <header class="main__header">
+      <nav class="header__nav">
+        <a class="logo" href="index.html">
+          <img src="img/logo.png" width="138" height="70" alt="Логотив сайта города Седона">
+        </a>
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
+            <a href="#">Информация</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#">Фото и видео</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#">Карта штата</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="link-current">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="visually-hidden">каталог гостиниц в Седоне</h1>
+      <section class="filter">
+        <h2 class="visually-hidden">Фильтры</h2>
+        <div class="filter__wrapper">
+          <form action="#" method="get" class="filter__form">
+            <div class="form__wrapper">
+              <fieldset>
+                <legend>Инфраструктура:</legend>
+                <ul>
+                  <li>
+                    <input type="checkbox" id="swimming-pool" name="swimming-pool" checked>
+                    <label for="swimming-pool">Бассейн</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="parking" name="parking">
+                    <label for="parking">Парковка</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="wi-fi" name="wi-fi">
+                    <label for="wi-fi">Wi-Fi</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset>
+                <legend>Тип жилья:</legend>
+                <ul>
+                  <li>
+                    <input type="checkbox" id="hotel" name="hotel" checked>
+                    <label for="hotel">Гостиница</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="motel" name="motel" checked>
+                    <label for="motel">Мотель</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="apartments" name="apartments" checked>
+                    <label for="apartments">Мотель</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <fieldset class="filter__price">
+              <legend>Стоимость в сутки, ₽:</legend>
+              <p>
+                <span>от 0</span><span>До 3000</span>
+              </p>
+              <p>
+                <input type="range" min="0" max="3000" step="100">
+              </p>
+              <button type="submit">Показать</button>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+      <section class="sorting">
+        <h2>Сортировка:</h2>
+        <p>Найдено: <span>3</span></p>
+        <ul>
+          <li>
+            <button type="button">По цене</button>
+          </li>
+          <li>
+            <button type="button">По типу</button>
+          </li>
+          <li>
+            <button type="button">По рейтингу</button>
+          </li>
+        </ul>
+        <div class="sorting__pagination">
+          <button type="button">По возрастанию</button>
+          <button type="button">По убыванию</button>
+        </div>
+      </section>
+      <section class="housing-results">
+        <h2 class="visually-hidden">Результаты фильтра</h2>
+        <ul>
+          <li>
+            <article>
+              <div class="housing__description">
+                <h3>Amara Resort & Spa</h3>
+                <span class="housing__type">Гостиница</span>
+                <span class="housing__price">От 4000
+                  <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.04761 0.500854H6.03569C7.72543 0.500854 9.09524 1.87066 9.09524 3.5604C9.09524 5.25014 7.72543 6.61995 6.03569 6.61995H2.04761V0.500854Z"
+                      stroke="#1B1A17" />
+                    <path d="M2 6.50085H0" stroke="#1B1A17" />
+                    <path d="M2.00006 0.000854492V13.0009M0.30957 9.69562H6.80958" stroke="#1B1A17" />
+                  </svg>
+                </span>
+                <p>
+                  <a href="#" class="button housing__link">
+                    Подробнее
+                  </a>
+                  <button class="button housing__button">
+                    Забронировать
+                  </button>
+                </p>
+              </div>
+              <div class="housing__img">
+                <img src="img/catalog-amara-resort.png" width="135" height="90"
+                  alt="роскошный вид из окна гостиницы на парк и горы">
+              </div>
+              <div class="housing__rating">
+                <p>
+                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                      fill="#81B3D2" />
+                  </svg>
+                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                      fill="#81B3D2" />
+                  </svg>
+                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                      fill="#81B3D2" />
+                  </svg>
+                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                      fill="#81B3D2" />
+                  </svg>
+                </p>
+                <p>Рейтинг: 8,5</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="housing__description">
+                <h3>Desert Quail Inn</h3>
+                <span class="housing__type">Мотель</span>
+                <span class="housing__price">От 3000
+                  <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.04761 0.500854H6.03569C7.72543 0.500854 9.09524 1.87066 9.09524 3.5604C9.09524 5.25014 7.72543 6.61995 6.03569 6.61995H2.04761V0.500854Z"
+                      stroke="#1B1A17" />
+                    <path d="M2 6.50085H0" stroke="#1B1A17" />
+                    <path d="M2.00006 0.000854492V13.0009M0.30957 9.69562H6.80958" stroke="#1B1A17" />
+                  </svg>
+                </span>
+                <p>
+                  <a href="#" class="button housing__link">
+                    Подробнее
+                  </a>
+                  <button class="button housing__button">
+                    Забронировать
+                  </button>
+                </p>
+              </div>
+              <div class="housing__img">
+                <img src="img/catalog-desert-quailinn.png" width="135" height="90" alt="фото мотеля у дороги">
+              </div>
+              <div class="housing__rating">
+                <p>
+                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                      fill="#81B3D2" />
+                  </svg>
+                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                      fill="#81B3D2" />
+                  </svg>
+                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                      fill="#81B3D2" />
+                  </svg>
+                </p>
+                <p>Рейтинг: 8,9</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <div class="housing__description">
+                <h3>Villas at Poco Diablo</h3>
+                <span class="housing__type">Апартаменты</span>
+                <span class="housing__price">От 2000
+                  <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.04761 0.500854H6.03569C7.72543 0.500854 9.09524 1.87066 9.09524 3.5604C9.09524 5.25014 7.72543 6.61995 6.03569 6.61995H2.04761V0.500854Z"
+                      stroke="#1B1A17" />
+                    <path d="M2 6.50085H0" stroke="#1B1A17" />
+                    <path d="M2.00006 0.000854492V13.0009M0.30957 9.69562H6.80958" stroke="#1B1A17" />
+                  </svg>
+                </span>
+                <p>
+                  <a href="#" class="button housing__link">
+                    Подробнее
+                  </a>
+                  <button class="button housing__button">
+                    Забронировать
+                  </button>
+                </p>
+              </div>
+              <div class="housing__img">
+                <img src="img/catalog-villas-poco.png" width="135" height="90"
+                  alt="вилла, около которой большая зеленая лужайка и много деревьев">
+              </div>
+              <div class="housing__rating">
+                <p>
+                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                      fill="#81B3D2" />
+                  </svg>
+                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                      fill="#81B3D2" />
+                  </svg>
+                </p>
+                <p>Рейтинг: 9,2</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="page__footer">
+      <div class="contacts">
+        <a href="#">#visitSEDONA</a>
+        <a href="tel:+78005558628">+7 800 555-86-28</a>
+      </div>
+      <ul class="footer__social-list">
+        <li class="footer__social-item">
+          <a href="" class="footer__social-link">Твиттер</a>
+        </li>
+        <li class="footer__social-item">
+          <a href="" class="footer__social-link">Фейсбук</a>
+        </li>
+        <li class="footer__social-item">
+          <a href="" class="footer__social-link">Ютуб</a>
+        </li>
+      </ul>
+      <p class="footer__copyright">
+        Website by <img src="img/logo_htmlacademy.png" width="115" height="33" alt="Логотип htmlacademy">
+      </p>
+    </footer>
+  </div>
+
+</body>
+
+</html>
