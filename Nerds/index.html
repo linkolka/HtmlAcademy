@@ -23,16 +23,16 @@
       </a>
       <ul class="main-navigation__list list">
         <li class="main-navigation__item">
-          <a class="main-navigation__link link" href="#">Студия</a>
+          <a class="main-navigation__link link" href="blank.html">Студия</a>
         </li>
         <li class="main-navigation__item">
-          <a class="main-navigation__link link" href="#">Клиенты</a>
+          <a class="main-navigation__link link" href="blank.html">Клиенты</a>
         </li>
         <li class="main-navigation__item">
           <a class="main-navigation__link link" href="catalog.html">Магазин</a>
         </li>
         <li class="main-navigation__item">
-          <a class="main-navigation__link link" href="#">Контакты</a>
+          <a class="main-navigation__link link" href="blank.html">Контакты</a>
         </li>
       </ul>
       <div class="cart">
@@ -43,59 +43,59 @@
   <main>
     <h1 class="visually-hidden">Главная страница дизайн студии Nerds</h1>
     <section class="promo">
-      <div class="container">
+      <div class="container slider">
         <h2 class="visually-hidden">Слайдер</h2>
-        <ul class="slides-list list">
-          <li class="slide-item">
+        <ul class="slider-list list">
+          <li class="slider-item slide slide-current">
             <div class="slide-text">
               <h3 class="title slide-title">Долго, дорого,<br> скрупулезно.</h3>
-              <p class="">Математически выверенный дизайн <br>для вашего сайта или мобильного приложения.
+              <p class="slide-subtitle">Математически выверенный дизайн <br>для вашего сайта или мобильного приложения.
               </p>
-              <a class="btn btn-basic link" href="#"><span>узнать больше</span></a>
+              <a class="btn slide-btn link" href="#">
+                <span>узнать больше</span>
+              </a>
             </div>
             <div class="slide-img">
-              <img src="img/slide1.png" width="760" height="431" alt="slide1">
+              <img src="img/slide1.png" width="760" height="431" alt="">
             </div>
           </li>
-          <li class="slide-item">
+          <li class="slider-item slide">
             <div class="slide-text">
               <h3 class="title slide-title">Любим математику <br>как никто другой.</h3>
               <p class="slide-subtitle">Никакого креатива, только математические формулы <br>для расчета идеальных
                 пропорций.
               </p>
-              <a class="btn btn-basic link" href="#">узнать больше</a>
+              <a class="btn slide-btn link" href="#">
+                <span>узнать больше</span>
+              </a>
             </div>
             <div class="slide-img">
-              <img src="img/slide2.png" width="760" height="431" alt="slide2">
+              <img src="img/slide2.png" width="760" height="431" alt="">
             </div>
           </li>
-          <li class="slide-item">
+          <li class="slider-item slide">
             <div class="slide-text">
               <h3 class="title slide-title">Только ночь,<br> только хардкор.</h3>
               <p class="slide-subtitle">Работать днем, как все? Мы против этого. <br>Ближе к полуночи работа только
                 начинается.
               </p>
-              <a class="btn btn-basic link" href="#">узнать больше</a>
+              <a class="btn slide-btn link" href="#">
+                <span>узнать больше</span>
+              </a>
             </div>
             <slide class="img">
-              <img src="img/slide3.png" width="760" height="431" alt="slide3">
+              <img src="img/slide3.png" width="760" height="431" alt="">
             </slide>
           </li>
         </ul>
-        <ul class="pagination-list list">
-          <li class="pagination-item pagination-item-current">
-            <a class="link" href="#"></a>
-          </li>
-          <li class="pagination-item">
-            <a class="link" href="#"></a>
-          </li>
-          <li class="pagination-item">
-            <a class="link" href="#"></a>
-          </li>
-        </ul>
+        <div class="slider-controls">
+          <button class="current" type="button" aria-label="Перейти на первый слайд"></button>
+          <button type="button" aria-label="Перейти на второй слайд"></button>
+          <button type="button" aria-label="Перейти на третий слайд"></button>
+        </div>
       </div>
     </section>
-    <section class="product container-min">
+    <section class="product container">
       <h2 class="visually-hidden">Наши продукты</h2>
       <ul class="product__list list">
         <li class="product__item">
@@ -103,7 +103,7 @@
           <img class="product__img" src="img/product1.png" width="300" height="146"
             alt="Схематическое изображение сайта">
           <p class="product__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <button class="btn btn-basic">
+          <button class="btn" type="button" aria-label="Заказать веб-сайт">
             <span>Заказать</span>
           </button>
         </li>
@@ -112,7 +112,7 @@
           <img class="product__img" src="img/product2.png" width="300" height="146"
             alt="Схематическое изображение мобильного приложения">
           <p class="product__text">Покорите топ-10 приложений <br>в AppStore и Google Play!</p>
-          <button class="btn btn-basic btn-green">
+          <button class="btn btn-green" type="button" aria-label="Заказ приложение">
             <span>Заказать</span>
           </button>
         </li>
@@ -121,7 +121,7 @@
           <img class="product__img" src="img/product3.png" width="300" height="146"
             alt="Схематическое изображение презентации">
           <p class="product__text">Вы даже не подозреваете, <br>насколько вы изумительны!</p>
-          <button class="btn btn-basic btn-yellow">
+          <button class="btn btn-yellow" type="button" aria-label="Заказать презентацию">
             <span>Заказать</span>
           </button>
         </li>
@@ -130,14 +130,15 @@
     <section class="about container">
       <h2 class="visually-hidden">О нас</h2>
       <div>
-        <p class="about__subtitle">Мы — маленькая, но гордая <br>дизайн-студия из Краснодара.</p>
-        <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не
+        <p class="about__title">Мы — маленькая, но гордая <br>дизайн-студия из Краснодара.</p>
+        <p class="about__subtitle">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше
+          креатива. Работаем не
           покладая рук, как роботы.</p>
         <p class="emphasized-text">Выполняем заказы на разработку:</p>
         <ul class="list orders-list">
-          <li>Веб-сайтов любой сложности</li>
-          <li>Мобильных приложений для iOS и Android</li>
-          <li>Слайдшоу и видео для корпоративных презентаций</li>
+          <li class="orders-item">Веб-сайтов любой сложности</li>
+          <li class="orders-item">Мобильных приложений для iOS и Android</li>
+          <li class="orders-item">Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
       </div>
       <div>
@@ -189,27 +190,34 @@
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="map">
-        <img src="img/map.png" width="1440" height="416" alt="Мы на карте">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.2046627429816!2d30.318018340151543!3d59.968331625457076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc4e8ce61%3A0x74d4f0cbfe1fd995!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDUg0LrQvtGA0L_Rg9GBINCfLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTcwMjI!5e0!3m2!1sru!2sde!4v1650653140379!5m2!1sru!2sde"
+          width="100%" height="416" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- <img src="img/map.png" width="1440" height="416" alt="Мы на карте"> -->
       </div>
-      <div class="map-marker">
-        <img src="img/map-marker.svg" width="231" height="190" alt="Маркер на карте">
-      </div>
-      <div class="contacts__info container">
-        <p class="contacts__subtitle">NЁRDS DESIGN STUDIO</p>
-        <div class="contacts__text">
-          <address>наб. Реки Карповки,<br> 5 лит П, Санкт-Петербург</address>
-          <p><a class="link" href="tel:+78005558628">+7 800 555-86-28</a></p>
+      <div class="container">
+        <div class="map-marker">
+          <img src="img/map-marker.svg" width="231" height="190" alt="Маркер на карте">
         </div>
-        <a class="btn btn-basic link" href="#">
-          <span>Напишите нам</span>
-        </a>
+        <div class="contacts__info">
+          <p class="contacts__subtitle">NЁRDS DESIGN STUDIO</p>
+          <div class="contacts__text">
+            <address>наб. Реки Карповки,<br> 5 лит П, Санкт-Петербург</address>
+            <p><a class="link" href="tel:+78005558628">+7 800 555-86-28</a></p>
+          </div>
+          <button class="btn contacts-btn link" href="#" type="button">
+            <span>Напишите нам</span>
+          </button>
+        </div>
       </div>
     </section>
     <div class="footer__bottom container">
       <ul class="social-list list">
         <li class="social-item">
           <a class="link social-link" href="#">
-            <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+              area-hidden="true" focusable="false">
               <path
                 d="M16.138 11.51C17.094 11.201 18.318 13.55 19.621 14.449C20.599 15.13 21.348 14.983 21.348 14.983L24.821 14.933C24.821 14.933 26.636 14.821 25.778 13.379C25.707 13.259 25.275 12.31 23.193 10.357C21.016 8.31404 21.311 8.64504 23.932 5.11304C25.529 2.96004 26.168 1.64504 25.968 1.08504C25.776 0.546037 24.603 0.686037 24.603 0.686037L20.69 0.713037C20.309 0.714037 19.986 0.832037 19.839 1.22804C19.836 1.23204 19.218 2.89404 18.394 4.30704C16.653 7.29604 15.958 7.45504 15.67 7.26804C15.009 6.83504 15.176 5.53104 15.176 4.60404C15.176 1.70704 15.608 0.499037 14.33 0.187037C13.903 0.0830374 13.591 0.0150374 12.502 0.00503741C11.11 -0.0159626 9.92797 0.00503743 9.25797 0.334037C8.81297 0.557037 8.47197 1.04604 8.67897 1.07404C8.93897 1.10904 9.52197 1.23404 9.83397 1.66004C10.235 2.21204 10.223 3.44904 10.223 3.44904C10.223 3.44904 10.452 6.86004 9.68297 7.28304C9.15497 7.57304 8.43297 6.98104 6.87997 4.26704C6.08697 2.87904 5.48797 1.34504 5.48797 1.34504C5.48797 1.34504 5.37197 1.06004 5.16197 0.904037C4.91197 0.719037 4.56197 0.660037 4.56197 0.660037L0.84797 0.684037C0.84797 0.684037 0.28997 0.700037 0.0849697 0.946037C-0.0970303 1.16404 0.0699697 1.61404 0.0699697 1.61404C0.0699697 1.61404 2.97897 8.49504 6.27297 11.961C9.29297 15.143 12.725 14.932 12.725 14.932H14.28C14.28 14.932 14.749 14.878 14.989 14.62C15.213 14.38 15.203 13.929 15.203 13.929C15.203 13.929 15.172 11.82 16.138 11.51Z"
                 fill="white" />
@@ -219,18 +227,20 @@
         </li>
         <li class="social-item">
           <a class="link social-link" href="#">
-            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18 21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5 7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3 18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5 17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819 9H18V18H3ZM14 7H18V3H14V7Z"
-                fill="white" />
+            <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+              area-hidden="true" focusable="false">
+              <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
             </svg>
             <span class="visually-hidden">Фейсбук</span>
           </a>
         </li>
         <li class="social-item">
           <a class="link social-link" href="#">
-            <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+              area-hidden="true" focusable="false">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18 21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5 7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3 18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5 17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819 9H18V18H3ZM14 7H18V3H14V7Z"
+                fill="white" />
             </svg>
             <span class="visually-hidden">Инстаграм</span>
           </a>
@@ -248,21 +258,24 @@
       <span class="visually-hidden">Закрыть</span>
     </button>
     <form class="message" action="https://echo.htmlacademy.ru/" method="post">
-      <p>
+      <p class="message__item">
         <label class="message__label" for="name">Ваше имя:</label>
-        <input type="text" id="name" placeholder="Имя Фамилия">
+        <input type="text" id="name" name="username" placeholder="Имя Фамилия">
       </p>
-      <p>
+      <p class="message__item">
         <label class="message__label" for="email">Ваш email:</label>
-        <input type="text" id="email" placeholder="email@example.com ">
+        <input type="text" id="email" name="email" placeholder="email@example.com">
       </p>
-      <p class="message__text">
+      <p class="message__item-big">
         <label class="message__label" for="text">Текст письма:</label>
         <textarea name="text" id="text" placeholder="В свободной форме"></textarea>
       </p>
-      <button class="btn btn-basic" type="submit">Отправить</button>
+      <button class="btn modal-btn" type="submit" area-label="Отправить заполненную форму">
+        <span>Отправить</span>
+      </button>
     </form>
   </section>
+  <script src="js/popup.js"></script>
 </body>
 
 </html>

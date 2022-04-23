@@ -23,19 +23,19 @@
       </a>
       <ul class="main-navigation__list list">
         <li class="main-navigation__item">
-          <a class="main-navigation__link link" href="#">Студия</a>
+          <a class="main-navigation__link link" href="blank.html">Студия</a>
         </li>
         <li class="main-navigation__item">
-          <a class="main-navigation__link link" href="#">Клиенты</a>
+          <a class="main-navigation__link link" href="blank.html">Клиенты</a>
         </li>
-        <li class="main-navigation__item">
+        <li class="main-navigation__item current">
           <a class="main-navigation__link link" href="catalog.html">Магазин</a>
         </li>
         <li class="main-navigation__item">
-          <a class="main-navigation__link link" href="#">Контакты</a>
+          <a class="main-navigation__link link" href="blank.html">Контакты</a>
         </li>
       </ul>
-      <a class="cart main-navigation__link link" href="#">Корзина</a>
+      <a class="cart main-navigation__link link" href="blank.html">Корзина</a>
     </nav>
   </header>
   <main class="container">
@@ -43,33 +43,44 @@
     <div class="page-catalog">
       <section class="filters">
         <h2 class="visually-hidden">Фильтры</h2>
-        <form class="filters__form" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="filters__form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="filters__value">
             <legend class="title catalog__title">Стоимость:</legend>
-            <div class="filters__range">
-              <label class="visually-hidden" for="price-range">Диапазон</label>
-              <input type="range" id="price-range">
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="
+                    width: 30%;
+                    margin-left: 20%
+                  "></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="left: 20%"></div>
+                <div class="toggle toggle-max" tabindex="0" style="left: 50%"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price" for="price-from">От</label>
+                <input type="number" id="price-from" value="0">
+                <label class="max-price" for="price-to">До</label>
+                <input type="number" id="price-to" value="15000">
+              </div>
             </div>
-            <p>
-              <label for="price-from">От</label>
-              <input type="text" id="price-from" value="0">
-              <label for="price-to">До</label>
-              <input type="text" id="price-to" value="150 000">
-            </p>
           </fieldset>
           <fieldset class="filters__grid">
             <legend class="title catalog__title">Сетка:</legend>
             <ul class="list">
-              <li>
-                <input type="radio" name="frame" id="adaptive" value="adaptive" checked>
+              <li class="filter__option filter-radio">
+                <input class="visually-hidden filters__input-radio filters__input" type="radio" name="frame"
+                  id="adaptive" value="adaptive" checked>
                 <label for="adaptive">Адаптивная</label>
               </li>
-              <li>
-                <input type="radio" name="frame" id="fixed" value="fixed">
+              <li class="filter__option filter-radio">
+                <input class="visually-hidden filters__input-radio filters__input" type="radio" name="frame" id="fixed"
+                  value="fixed">
                 <label for="fixed">Фиксированная</label>
               </li>
-              <li>
-                <input type="radio" name="frame" id="retine" value="retine">
+              <li class="filter__option filter-radio">
+                <input class="visually-hidden filters__input-radio filters__input" type="radio" name="frame" id="retine"
+                  value="retine">
                 <label for="retine">Резиновая</label>
               </li>
             </ul>
@@ -77,29 +88,34 @@
           <fieldset class="filters__special">
             <legend class="title catalog__title">Особенности:</legend>
             <ul class="list">
-              <li>
-                <input type="checkbox" name="slider" id="slider" checked>
+              <li class="filter__option filter-checkbox">
+                <input class="visually-hidden filters__input-checkbox filters__input" type="checkbox" name="slider"
+                  id="slider" checked>
                 <label for="slider">Слайдер</label>
               </li>
-              <li>
-                <input type="checkbox" name="advantages-block" id="advantages-block">
+              <li class="filter__option filter-checkbox">
+                <input class="visually-hidden filters__input-checkbox filters__input" type="checkbox"
+                  name="advantages-block" id="advantages-block">
                 <label for="advantages-block">Блок преимуществ</label>
               </li>
-              <li>
-                <input type="checkbox" name="news" id="news" checked>
+              <li class="filter__option filter-checkbox">
+                <input class="visually-hidden filters__input-checkbox filters__input" type="checkbox" name="news"
+                  id="news" checked>
                 <label for="news">Новости</label>
               </li>
-              <li>
-                <input type="checkbox" name="gallery" id="gallery">
+              <li class="filter__option filter-checkbox">
+                <input class="visually-hidden filters__input-checkbox filters__input" type="checkbox" name="gallery"
+                  id="gallery">
                 <label for="gallery">Галерея</label>
               </li>
-              <li>
-                <input type="checkbox" name="cart" id="cart">
+              <li class="filter__option filter-checkbox">
+                <input class="visually-hidden filters__input-checkbox filters__input" type="checkbox" name="cart"
+                  id="cart">
                 <label for="cart">Корзина</label>
               </li>
             </ul>
           </fieldset>
-          <button class="btn filters__btn" type="submit">Показать</button>
+          <button class="btn filters__btn" type="submit" arial-label="Показать результаты фильтра">Показать</button>
         </form>
       </section>
       <section class="products">
@@ -107,29 +123,39 @@
           <p class="title catalog__title">Сортировать</p>
           <div class="sorting__menu">
             <ul class="list">
-              <li><a class="link sorting__link" href="#">По цене</a></li>
-              <li><a class="link sorting__link" href="#">По типу</a></li>
-              <li><a class="link sorting__link" href="#">По названию</a></li>
+              <li>
+                <a class="link sorting__link" href="#">По цене</a>
+              </li>
+              <li>
+                <a class="link sorting__link" href="#">По типу</a>
+              </li>
+              <li>
+                <a class="link sorting__link" href="#">По названию</a>
+              </li>
             </ul>
-            <button class="button-sort button-sort-down" type="button">
-              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.5 10L0 0H11" fill="#A6A6A6" />
-              </svg>
-              <span class="visually-hidden">По убыванию</span>
-            </button>
-            <button class="button-sort button-sort-up" type="button">
-              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6" />
-              </svg>
-              <span class="visually-hidden">По возрастанию</span>
-            </button>
+            <div class="sorting__buttons">
+              <a class="button-sort button-sort-down" href="#">
+                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true" focusable="false">
+                  <path d="M5.5 10L0 0H11" fill="#A6A6A6" />
+                </svg>
+                <span class="visually-hidden">По убыванию</span>
+              </a>
+              <a class="button-sort button-sort-up" href="#">
+                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true" focusable="false">
+                  <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6" />
+                </svg>
+                <span class="visually-hidden">По возрастанию</span>
+              </a>
+            </div>
           </div>
         </div>
         <h2 class="visually-hidden">Список сайтов</h2>
         <div>
           <ul class="products__list list">
             <li>
-              <article class="product__card">
+              <article class="product__card" tabindex="0">
                 <div class="card-header">
                   <img src="img/products/card-header.svg" width="360" height="40" alt="Имитация меню браузера">
                 </div>
@@ -139,12 +165,12 @@
                     <a class="link catalog__link" href="#">Sedona</a>
                   </h3>
                   <p>Информационный сайт <br>для туристов</p>
-                  <div class="btn">9 900 ₽</div>
+                  <button href="#" class="btn" type="button">9 900 ₽</button>
                 </div>
               </article>
             </li>
             <li>
-              <article class="product__card">
+              <article class="product__card" tabindex="0">
                 <div class="card-header">
                   <img src="img/products/card-header.svg" width="360" height="40" alt="Имитация меню браузера">
                 </div>
@@ -152,12 +178,12 @@
                 <div class="card-description">
                   <h3 class="title catalog__title"><a class="link catalog__link" href="#">Pink App</a></h3>
                   <p>Продуктовый лендинг <br>приложения для iOS и Android</p>
-                  <div class="btn">9 900 ₽</div>
+                  <button class="btn" type="button">9 900 ₽</button>
                 </div>
               </article>
             </li>
             <li>
-              <article class="product__card">
+              <article class="product__card" tabindex="0">
                 <div class="card-header">
                   <img src="img/products/card-header.svg" width="360" height="40" alt="Имитация меню браузера">
                 </div>
@@ -167,12 +193,12 @@
                     <a class="link catalog__link" href="#">Barbershop</a>
                   </h3>
                   <p>Сайт салона красоты.<br>Для мужчин, да.</p>
-                  <div class="btn">9 900 ₽</div>
+                  <button class="btn" type="button">9 900 ₽</button>
                 </div>
               </article>
             </li>
             <li>
-              <article class="product__card">
+              <article class="product__card" tabindex="0">
                 <div class="card-header">
                   <img src="img/products/card-header.svg" width="360" height="40" alt="Имитация меню браузера">
                 </div>
@@ -182,12 +208,12 @@
                     <a class="link catalog__link" href="#">Mishka</a>
                   </h3>
                   <p>Сайт салона красоты.<br>Для мужчин, да.</p>
-                  <div class="btn">9 900 ₽</div>
+                  <button class="btn" type="button">9 900 ₽</button>
                 </div>
               </article>
             </li>
             <li>
-              <article class="product__card">
+              <article class="product__card" tabindex="0">
                 <div class="card-header">
                   <img src="img/products/card-header.svg" width="360" height="40" alt="Имитация меню браузера">
                 </div>
@@ -197,12 +223,12 @@
                     <a class="link catalog__link" href="#">A Plus</a>
                   </h3>
                   <p>Лендинг курсов повышения квалификации.</p>
-                  <div class="btn">9 900 ₽</div>
+                  <button class="btn" type="button">9 900 ₽</button>
                 </div>
               </article>
             </li>
             <li>
-              <article class="product__card">
+              <article class="product__card" tabindex="0">
                 <div class="card-header">
                   <img src="img/products/card-header.svg" width="360" height="40" alt="Имитация меню браузера">
                 </div>
@@ -213,7 +239,7 @@
                     <a class="link catalog__link" href="#">Кваст</a>
                   </h3>
                   <p>Промо-сайт производителя <br>крафтового кваса</p>
-                  <div class="btn">9 900 ₽</div>
+                  <button class="btn" type="button">9 900 ₽</button>
                 </div>
             </li>
             </article>
@@ -253,16 +279,17 @@
           <address>наб. Реки Карповки,<br> 5 лит П, Санкт-Петербург</address>
           <p><a class="link" href="tel:+78005558628">+7 800 555-86-28</a></p>
         </div>
-        <a class="btn btn-basic link" href="#">
+        <button class="btn contacts-btn link" href="#" type="button">
           <span>Напишите нам</span>
-        </a>
+        </button>
       </div>
     </section>
     <div class="footer__bottom container">
       <ul class="social-list list">
         <li class="social-item">
           <a class="link social-link" href="#">
-            <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg"
+              area-hidden="true" focusable="false">
               <path
                 d="M16.138 11.51C17.094 11.201 18.318 13.55 19.621 14.449C20.599 15.13 21.348 14.983 21.348 14.983L24.821 14.933C24.821 14.933 26.636 14.821 25.778 13.379C25.707 13.259 25.275 12.31 23.193 10.357C21.016 8.31404 21.311 8.64504 23.932 5.11304C25.529 2.96004 26.168 1.64504 25.968 1.08504C25.776 0.546037 24.603 0.686037 24.603 0.686037L20.69 0.713037C20.309 0.714037 19.986 0.832037 19.839 1.22804C19.836 1.23204 19.218 2.89404 18.394 4.30704C16.653 7.29604 15.958 7.45504 15.67 7.26804C15.009 6.83504 15.176 5.53104 15.176 4.60404C15.176 1.70704 15.608 0.499037 14.33 0.187037C13.903 0.0830374 13.591 0.0150374 12.502 0.00503741C11.11 -0.0159626 9.92797 0.00503743 9.25797 0.334037C8.81297 0.557037 8.47197 1.04604 8.67897 1.07404C8.93897 1.10904 9.52197 1.23404 9.83397 1.66004C10.235 2.21204 10.223 3.44904 10.223 3.44904C10.223 3.44904 10.452 6.86004 9.68297 7.28304C9.15497 7.57304 8.43297 6.98104 6.87997 4.26704C6.08697 2.87904 5.48797 1.34504 5.48797 1.34504C5.48797 1.34504 5.37197 1.06004 5.16197 0.904037C4.91197 0.719037 4.56197 0.660037 4.56197 0.660037L0.84797 0.684037C0.84797 0.684037 0.28997 0.700037 0.0849697 0.946037C-0.0970303 1.16404 0.0699697 1.61404 0.0699697 1.61404C0.0699697 1.61404 2.97897 8.49504 6.27297 11.961C9.29297 15.143 12.725 14.932 12.725 14.932H14.28C14.28 14.932 14.749 14.878 14.989 14.62C15.213 14.38 15.203 13.929 15.203 13.929C15.203 13.929 15.172 11.82 16.138 11.51Z"
                 fill="white" />
@@ -272,18 +299,20 @@
         </li>
         <li class="social-item">
           <a class="link social-link" href="#">
-            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18 21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5 7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3 18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5 17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819 9H18V18H3ZM14 7H18V3H14V7Z"
-                fill="white" />
+            <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+              area-hidden="true" focusable="false">
+              <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
             </svg>
             <span class="visually-hidden">Фейсбук</span>
           </a>
         </li>
         <li class="social-item">
           <a class="link social-link" href="#">
-            <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+              area-hidden="true" focusable="false">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18 21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5 7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3 18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5 17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819 9H18V18H3ZM14 7H18V3H14V7Z"
+                fill="white" />
             </svg>
             <span class="visually-hidden">Инстаграм</span>
           </a>
@@ -300,22 +329,25 @@
     <button class="btn-close" type="button">
       <span class="visually-hidden">Закрыть</span>
     </button>
-    <form class="message" action="#" method="post">
-      <p>
+    <form class="message" action="https://echo.htmlacademy.ru/" method="post">
+      <p class="message__item">
         <label class="message__label" for="name">Ваше имя:</label>
-        <input type="text" id="name" placeholder="Имя Фамилия">
+        <input type="text" id="name" name="username" placeholder="Имя Фамилия">
       </p>
-      <p>
+      <p class="message__item">
         <label class="message__label" for="email">Ваш email:</label>
-        <input type="text" id="email" placeholder="email@example.com ">
+        <input type="text" id="email" name="email" placeholder="email@example.com">
       </p>
-      <p class="message__text">
+      <p class="message__item-big">
         <label class="message__label" for="text">Текст письма:</label>
         <textarea name="text" id="text" placeholder="В свободной форме"></textarea>
       </p>
-      <button class="btn" type="submit">Отправить</button>
+      <button class="btn modal-btn" type="submit" area-label="Отправить заполненную форму">
+        <span>Отправить</span>
+      </button>
     </form>
   </section>
+  <script src="js/popup.js"></script>
 </body>
 
 </html>

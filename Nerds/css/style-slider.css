@@ -1,0 +1,130 @@
+/* Для демострации */
+html, body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+body {
+  font-size: 18px;
+  line-height: 1.2;
+  font-family: "Roboto", Arial;
+}
+
+.site-wrapper {
+  min-width: 940px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  /* Для демонстрации */
+  min-height: 100vh;
+}
+
+.site-wrapper-1 {
+  background-color: #849d8f;
+  background-image: url("../img/Component\ 1.png");
+}
+
+.site-wrapper-2 {
+  background-color: #8996A6;;
+  background-image: url("../img/Component\ 2.png");
+}
+
+.site-wrapper-3 {
+  background-color: #9D8B84;
+  background-image: url("../img/Component\ 3.png");
+}
+
+/* Позиционируем и центрируем */
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Для демонстрации */
+.main-header {
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.slider {
+  position: relative;
+  padding-top: 321px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  display: none;
+}
+
+.slide-current {
+  display: block;
+}
+
+.slide-title {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.button {
+  display: inline-block;
+  padding: 9px 23px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  background: #F26843;
+  background: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  border-radius: 70px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: linear-gradient(to bottom, #f58669, #ec6f5e);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.button:active {
+  background: linear-gradient(to bottom, #d84732, #e1613e);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.slider-controls .current {
+  background-color: #ffffff;
+}
+
+/* Позиционируем кнопки */
+
+.slider-controls {
+  position: absolute;
+  bottom: 63px;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  width: 67px;
+  justify-content: space-between;
+}
+
+.slider-controls button {
+  padding: 0;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
