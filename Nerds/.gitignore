@@ -1,2 +1,4 @@
 #игнорировать файл nerds.docs
-nerds.docx
+*.docx
+slider.html
+sty-slider.css
