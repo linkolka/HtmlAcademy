@@ -41,9 +41,10 @@
     </nav>
   </header>
   <main class="container">
+
     <section class="modal">
       <h2 class="title modal__title">Напишите нам</h2>
-      <button class="btn-close" type="button">
+      <button class="btn--close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
       <form class="message" action="https://echo.htmlacademy.ru/" method="post">
@@ -55,18 +56,43 @@
           <label class="message__label" for="email">Ваш email:</label>
           <input type="text" id="email" name="email" placeholder="email@example.com">
         </p>
-        <p class="message__item-big">
+        <p class="message__item--big">
           <label class="message__label" for="text">Текст письма:</label>
           <textarea name="text" id="text" placeholder="В свободной форме"></textarea>
         </p>
-        <button class="btn modal-btn" type="submit" area-label="Отправить заполненную форму">
+        <button class="btn modal--btn" type="submit" area-label="Отправить заполненную форму">
           <span>Отправить</span>
         </button>
       </form>
     </section>
   </main>
-  <footer>
-    <div class="footer__bottom container">
+  <footer class="main-footer">
+
+    <section class="contacts">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.2046627429816!2d30.318018340151543!3d59.968331625457076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc4e8ce61%3A0x74d4f0cbfe1fd995!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDUg0LrQvtGA0L_Rg9GBINCfLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTcwMjI!5e0!3m2!1sru!2sde!4v1650653140379!5m2!1sru!2sde"
+          width="1440" height="416" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Офис нашей студии находится по адресу наб. Реки
+          Карповки, 5 лит П, Санкт-Петербург"></iframe>
+      </div>
+      <div class="map-marker">
+        <img src="img/map-marker.svg" width="231" height="190" alt="Маркер на карте">
+      </div>
+      <div class="contacts__info">
+        <p class="contacts__subtitle">NЁRDS DESIGN STUDIO</p>
+        <div class="contacts__text">
+          <address>наб. Реки Карповки,<br> 5 лит П, Санкт-Петербург</address>
+          <p><a class="link" href="tel:+78005558628">+7 800 555-86-28</a></p>
+        </div>
+        <a class="btn contacts__btn link" href="form.html">
+          <span>Напишите нам</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="main-footer__bottom container">
       <ul class="social-list list">
         <li class="social-item">
           <a class="link social-link" href="#">
@@ -100,12 +126,37 @@
           </a>
         </li>
       </ul>
-      <div class="footer__bottom-text">
+      <div>
         <p class="slogan-text">Давайте дружить, это выгодно!</p>
         <p class="special-text">Скидка 10% для друзей из социальных сетей.</p>
       </div>
     </div>
   </footer>
+
+  <section class="modal">
+    <h2 class="title modal__title">Напишите нам</h2>
+    <button class="btn--close" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+    <form class="message" action="https://echo.htmlacademy.ru/" method="post">
+      <p class="message__item">
+        <label class="message__label" for="name">Ваше имя:</label>
+        <input class="message__input" type="text" id="name" name="username" placeholder="Имя Фамилия">
+      </p>
+      <p class="message__item">
+        <label class="message__label" for="email">Ваш email:</label>
+        <input class="message__input" type="text" id="email" name="email" placeholder="email@example.com">
+      </p>
+      <p class="message__item--big">
+        <label class="message__label" for="text">Текст письма:</label>
+        <textarea class="message__input message__textarea" name="text" id="text"
+          placeholder="В свободной форме"></textarea>
+      </p>
+      <button class="btn modal--btn" type="submit" area-label="Отправить заполненную форму">
+        <span>Отправить</span>
+      </button>
+    </form>
+  </section>
 </body>
 
 </html>
