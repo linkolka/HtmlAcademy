@@ -1,6 +1,6 @@
-const link = document.querySelector('.contacts-btn');
+const link = document.querySelector('.contacts__btn');
 const popup = document.querySelector('.modal');
-const close = document.querySelector('.btn-close');
+const close = document.querySelector('.btn--close');
 const form = popup.querySelector('form');
 const username = popup.querySelector('[name=username]');
 const email = popup.querySelector('[name=email]'); //ищем по попапу, а не в документе, т.к. так производительнее
@@ -12,7 +12,7 @@ const storage = localStorage.getItem('username');
 
 link.addEventListener('click', function(evt) {
   evt.preventDefault(); //отменяем действия браузера по умолчанию, в частности для ссылки
-  popup.classList.add('modal-show');
+  popup.classList.add('modal--show');
 
   if (storage) {
     username.value = storage;
@@ -24,8 +24,8 @@ link.addEventListener('click', function(evt) {
 
 close.addEventListener('click', function(evt) {
   evt.preventDefault();
-  popup.classList.remove('modal-show');
-  popup.classList.remove('modal-error');//нужно удалить класс, чтобы при следующем открытии модального окна, он не сработал
+  popup.classList.remove('modal--show');
+  popup.classList.remove('modal--error');//нужно удалить класс, чтобы при следующем открытии модального окна, он не сработал
 });
 
 //подписку на событие оформляем не у кнопки отправки, а у формы
@@ -34,7 +34,7 @@ close.addEventListener('click', function(evt) {
 form.addEventListener('submit', function(evt) {
   if(!email.value || !text.value) {
     evt.preventDefault();
-    popup.classList.add('modal-error');
+    popup.classList.add('modal--error');
   } else {
       localStorage.setItem('username', username.value);
   }
@@ -42,10 +42,10 @@ form.addEventListener('submit', function(evt) {
 
 window.addEventListener('keydown', function (evt) {
   if (evt.key === 'Escape') {
-    if (popup.classList.contains('modal-show')) {
+    if (popup.classList.contains('modal--show')) {
       evt.preventDefault();
-      popup.classList.remove('modal-show');
-      popup.classList.remove('modal-error');
+      popup.classList.remove('modal--show');
+      popup.classList.remove('modal--error');
     }
   }
 })
