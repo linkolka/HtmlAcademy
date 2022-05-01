@@ -374,7 +374,7 @@ img {
   cursor: pointer;
 }
 
-.controls__btn .current::before {
+.current::before {
   position: absolute;
   content: "";
   top: 5px;
@@ -647,11 +647,12 @@ img {
   opacity: 0.2;
 }
 
-.partners__link {
+.partners__link:hover,
+.partners__link:focus {
   opacity: 1;
 }
 
-.partners__link {
+.partners__link:active {
   opacity: 0.1;
 }
 
@@ -1353,8 +1354,8 @@ textarea[placeholder] {
   opacity: 0.12;
 }
 
-.product__card:hover .card-description,
-.product__card:focus .card-description {
+.product__card:hover .card__description,
+.product__card:focus .card__description {
   display: block;
 }
 
