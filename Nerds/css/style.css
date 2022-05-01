@@ -247,7 +247,7 @@ img {
   opacity: 0.3;
 }
 
-.main-navigation__list .current::before {
+.main-navigation__item--current::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -374,7 +374,7 @@ img {
   cursor: pointer;
 }
 
-.current::before {
+.controls__btn--current::before {
   position: absolute;
   content: "";
   top: 5px;
@@ -1448,7 +1448,7 @@ h3.catalog__title {
   opacity: 0.3;
 }
 
-.inner-page .pagination__link-current {
+.inner-page .pagination__link--current {
   background: rgba(0, 0, 0, 0.0001);
   border: 3px solid var(--current);
   padding: 13px 17px;
